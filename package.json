@@ -1,0 +1,8 @@
+{
+  "name": "ToDoList-API",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/Walaam126/ToDoList-API.git",
+  "author": "Walaam126 <walaamajeed12@gmail.com>",
+  "license": "MIT"
+}
