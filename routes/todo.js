@@ -16,5 +16,7 @@ router.param("todoId", async (req, res, next, todoId) => {
 
 router.get("/", controller.todoList);
 router.post("/", controller.todoCreate);
+router.put("/:todoId", controller.todoUpdate);
+router.delete("/:todoId", controller.todoDelete);
 
 module.exports = router;

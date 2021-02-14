@@ -21,10 +21,21 @@ exports.todoList = async (req, res, next) => {
 
 exports.todoCreate = async (req, res, next) => {
   try {
-    console.log(req.body);
     const newTodo = await Todo.create(req.body);
+    console.log(newTodo);
+
     res.status(201).json(newTodo);
   } catch (error) {
     next(error);
   }
 };
+
+exports.todoUpdate = async (req, res, next) => {
+    await req.todo.update(req.body);
+    res.status(200).json(req.todo);
+  };
+  
+  exports.todoDelete = async (req, res, next) => {
+    await req.todo.destroy();
+    res.status(204).end();
+  };
