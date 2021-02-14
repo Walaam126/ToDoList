@@ -1,6 +1,6 @@
 const { Todo } = require("../db/models");
 
-exports.fetchTodo  = async (todoId, next) => {
+exports.fetchTodo = async (todoId, next) => {
   try {
     const todoFound = await Todo.findByPk(todoId);
     if (todoFound) return todoFound;
@@ -20,12 +20,11 @@ exports.todoList = async (req, res, next) => {
 };
 
 exports.todoCreate = async (req, res, next) => {
-    try {
-      console.log(req);
-      const newTodo = await Todo.create(req.body);
-      res.status(201).json(newTodo);
-    } catch (error) {
-      next(error);
-    }
-  };
-  
+  try {
+    console.log(req.body);
+    const newTodo = await Todo.create(req.body);
+    res.status(201).json(newTodo);
+  } catch (error) {
+    next(error);
+  }
+};
