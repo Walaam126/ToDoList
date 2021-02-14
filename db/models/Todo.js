@@ -8,7 +8,8 @@ const Todo = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
       },
       status: {
-        type: DataTypes.BOOLEAN, defaultValue: false,
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
       priority: {
         type: DataTypes.STRING,
