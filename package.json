@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "repository": "https://github.com/Walaam126/ToDoList-API.git",
-<<<<<<< HEAD
+
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
